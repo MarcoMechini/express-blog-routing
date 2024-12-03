@@ -8,7 +8,8 @@ const data = [
             "Giappone",
             "cultura",
             "avventura"
-        ]
+        ],
+        "id": '1'
     },
     {
         "title": "Ricetta della Torta al Cioccolato",
@@ -19,7 +20,8 @@ const data = [
             "dolci",
             "cioccolato",
             "ricette"
-        ]
+        ],
+        "id": '2'
     },
     {
         "title": "Guida alla Programmazione in Python",
@@ -30,7 +32,8 @@ const data = [
             "Python",
             "tutorial",
             "tecnologia"
-        ]
+        ],
+        "id": '3'
     },
     {
         "title": "Le Migliori Serie TV del 2024",
@@ -41,7 +44,8 @@ const data = [
             "serie TV",
             "recensioni",
             "2024"
-        ]
+        ],
+        "id": '4'
     },
     {
         "title": "Come Mantenersi in Forma con lo Yoga",
@@ -52,7 +56,8 @@ const data = [
             "yoga",
             "fitness",
             "salute"
-        ]
+        ],
+        "id": '5'
     }
 ]
 

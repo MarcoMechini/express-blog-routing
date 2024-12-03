@@ -6,13 +6,19 @@ const postsList = require("../data/pizzas")
 
 //index
 router.get('/', (req, res) => {
-    res.json('Sono lista dei post');
+    res.json(postsList)
 })
 
 //show
 router.get('/:id', (req, res) => {
     const postId = req.params.id;
-    res.json(`Sono il post numero ${postId}`);
+    for (let i = 0; i < postsList.data.length; i++) {
+        const curPost = postsList.data[i];
+        // console.log(curPost);
+        if (curPost.id === postId) {
+            res.json(curPost)
+        }
+    }
 })
 
 //create
@@ -28,7 +34,7 @@ router.put('/', (req, res) => {
 //modify
 router.patch('/:id', (req, res) => {
     const postId = req.params.id;
-    res.json(`Modifica dell'elemento del post numero ${postId}`);
+    res.json(`Modifica dell'curPosto del post numero ${postId}`);
 })
 
 //destory
