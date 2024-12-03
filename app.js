@@ -1,9 +1,13 @@
 const express = require("express");
 const post = require("./data/pizzas");
+const postsRouter = require("./routers/posts")
+console.log(postsRouter);
+
 const app = express();
 const port = 3000;
 
 app.use(express.static('public'));
+app.use("/posts", postsRouter);
 
 app.get('/', (req, res) => {
     res.json('Hello');
@@ -15,7 +19,6 @@ app.get('/bacheca', (req, res) => {
         posts: post.data,
         length: post.data.length,
     })
-
 });
 
 app.listen(port, () => {
