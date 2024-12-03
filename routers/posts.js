@@ -6,20 +6,37 @@ const postsList = require("../data/pizzas")
 
 //index
 router.get('/', (req, res) => {
-    res.json('Sono nel router');
+    res.json('Sono lista dei post');
+})
+
+//show
+router.get('/:id', (req, res) => {
+    const postId = req.params.id;
+    res.json(`Sono il post numero ${postId}`);
 })
 
 //create
 router.post('/', (req, res) => {
-    res.json('Sono post');
+    res.json('Creazione del post');
 })
 
-//show  
+//update  
 router.put('/', (req, res) => {
-    res.json('Sono put');
+    res.json(`Modifica dei dati del post numero ${postId}`);
 })
 
-//update
+//modify
+router.patch('/:id', (req, res) => {
+    const postId = req.params.id;
+    res.json(`Modifica dell'elemento del post numero ${postId}`);
+})
 
-//delete
+//destory
+router.delete('/:id', (req, res) => {
+    const postId = req.params.id;
+    res.json(`Cancellazione del post numero ${postId}`);
+})
+
+
+
 module.exports = router

@@ -1,8 +1,6 @@
 const express = require("express");
 const post = require("./data/pizzas");
-const postsRouter = require("./routers/posts")
-console.log(postsRouter);
-
+const postsRouter = require("./routers/posts");
 const app = express();
 const port = 3000;
 
