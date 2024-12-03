@@ -14,8 +14,8 @@ app.get('/', (req, res) => {
 //nella route bacheca abbiamo come risposta un json che ha come parametri post e la lunghezza
 app.get('/bacheca', (req, res) => {
     res.json({
-        posts: post.data,
-        length: post.data.length,
+        posts: post,
+        length: post.length,
     })
 });
 

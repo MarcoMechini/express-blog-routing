@@ -12,13 +12,14 @@ router.get('/', (req, res) => {
 //show
 router.get('/:id', (req, res) => {
     const postId = req.params.id;
-    for (let i = 0; i < postsList.data.length; i++) {
-        const curPost = postsList.data[i];
-        // console.log(curPost);
-        if (curPost.id === postId) {
-            res.json(curPost)
-        }
-    }
+    const foundPost = postsList.find(post => post.id === postId)
+    res.json(foundPost);
+    // for (let i = 0; i < postsList.length; i++) {
+    //     const curPost = postsList[i];
+    //     if (curPost.id == postId) {
+    //         res.json(curPost)
+    //     }
+    // }
 })
 
 //create
