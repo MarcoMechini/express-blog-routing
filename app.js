@@ -1,5 +1,5 @@
 const express = require("express");
-const post = require("./data");
+const post = require("./data/pizzas");
 const app = express();
 const port = 3000;
 
